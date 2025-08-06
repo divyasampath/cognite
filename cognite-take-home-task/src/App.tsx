@@ -9,7 +9,26 @@ const App = () => {
     {
       id: '1',
       name: 'Alice',
-      messages: [] as Message[],
+      messages: [
+        {
+          id: crypto.randomUUID(),
+          text: 'Hey! How are you?',
+          sender: 'Alice',
+          timestamp: new Date(Date.now() - 3600 * 1000), // 1 hour ago
+        },
+        {
+          id: crypto.randomUUID(),
+          text: "I'm good! Working on a cool React project.",
+          sender: 'me',
+          timestamp: new Date(Date.now() - 3500 * 1000), // 58 minutes ago
+        },
+        {
+          id: crypto.randomUUID(),
+          text: 'That sounds fun! Need any help?',
+          sender: 'Alice',
+          timestamp: new Date(Date.now() - 3400 * 1000), // 56 minutes ago
+        },
+      ],
     },
     {
       id: '2',
@@ -29,7 +48,7 @@ const App = () => {
               messages: [
                 ...friend.messages,
                 {
-                  id: crypto.randomUUID(), // ✅ required for type compatibility
+                  id: crypto.randomUUID(),
                   text,
                   sender: 'me',
                   timestamp: new Date(),

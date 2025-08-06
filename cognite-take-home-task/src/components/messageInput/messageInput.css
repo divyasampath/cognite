@@ -26,4 +26,5 @@
 }
 .message-input-bar button:hover {
   background: #ad92e9;
+  border: 1px solid white;
 } 
