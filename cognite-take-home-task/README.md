@@ -42,5 +42,3 @@ A simple Messenger app built with React and TypeScript.
 - [x] No backend, persistence, or multi-user support
 
 ---
-
-Built with ❤️ for the Cognite take-home assignment.
